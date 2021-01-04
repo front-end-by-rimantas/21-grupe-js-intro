@@ -8,9 +8,9 @@ Kintamuju saugomos reiksmes tipai:
 - skaicius (number)
 - tekstas (string)
 - logine reiksme (boolean)
-- sarasas (array)
-- objektas (object)
-- funkcija (function)
+- sarasas (array [] )
+- objektas (object {})
+- funkcija (function () {} )
 
 */
 
@@ -92,3 +92,31 @@ console.log(pazymiai);
 
 const miestai = ['Anyksciai', 'Birzai', 'Chicago', 'Dotnuva'];
 console.log(miestai);
+
+console.log('-----------------');
+
+let gyvenamojiVieta = 'Gedimino pr. 9, Vilnius';
+console.log(gyvenamojiVieta);
+
+gyvenamojiVieta = 'Laisves pr. 1, Kaunas';
+console.log(gyvenamojiVieta);
+
+gyvenamojiVieta = 'Duonos g. 5, Telsiai';
+console.log(gyvenamojiVieta);
+
+console.log('-----------------');
+
+let pinigine = 0;
+console.log(pinigine);
+
+pinigine = 0.01;
+console.log(pinigine);
+
+pinigine = 1.01;
+console.log(pinigine);
+
+pinigine = 1515.49;
+console.log(pinigine);
+
+pinigine = 0;
+console.log(pinigine);
