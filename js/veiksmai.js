@@ -143,3 +143,46 @@ alterSum7 += numbers[index7++]; // prisumavau ketvirta skaiciu -> 0
 alterSum7 += numbers[index7++]; // prisumavau penkta skaiciu -> 7
 
 console.log(alterSum7);
+
+console.log('------------------');
+
+// Tekstinio saraso elementu apjungimas per kableli is galo
+
+const words = ['avilys', 'bites', 'cukrus', 'duona'];
+
+// Tikimasi rezultato: duona, cukrus, bites, avilys
+
+// 1) budas
+const wordList1 = words[3] + ', ' + words[2] + ', ' + words[1] + ', ' + words[0];
+console.log(1, wordList1);
+
+// 2) budas
+const wr1 = words[0];
+const wr2 = words[1];
+const wr3 = words[2];
+const wr4 = words[3];
+const sp = ', ';
+
+const wordList2 = wr4 + sp + wr3 + sp + wr2 + sp + wr1;
+console.log(2, wordList2);
+
+// 3a) budas
+const sp3 = ', ';
+let count = 4;
+
+let wordList3 = '';
+wordList3 += words[--count];
+wordList3 += sp3 + words[--count];
+wordList3 += sp3 + words[--count];
+wordList3 += sp3 + words[--count];
+console.log(wordList3);
+
+// 3b) budas
+let count2 = 3;
+
+let wordList4 = '';
+wordList4 += words[count2--];
+wordList4 += sp3 + words[count2--];
+wordList4 += sp3 + words[count2--];
+wordList4 += sp3 + words[count2--];
+console.log(wordList4);
