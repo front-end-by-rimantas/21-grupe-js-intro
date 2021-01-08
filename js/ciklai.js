@@ -17,11 +17,18 @@ for (let i = 0; i < menesiai.length; i++) {
 
 
 
-const pazymiai = [10, 2, 8, 4, 6, 4, 8, 2, 10];     // 6
+const pazymiai = [10, 2, 8, 4, 7];     // 6
 
-let vidurkis = 0;
+let suma = 0;
+const skaiciuKiekis = pazymiai.length;
 
-// logika
+// susumuojame visus pazymiu saraso narius (skaicius)
+for (let i = 0; i < skaiciuKiekis; i++) {
+    suma += pazymiai[i];
+}
 
+const vidurkis = suma / skaiciuKiekis;
 
+console.log(suma, '/', skaiciuKiekis, '=', vidurkis);
 console.log('Pazymiu vidurkis:', vidurkis);
+
