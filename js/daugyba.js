@@ -5,10 +5,10 @@ function daugyba(a, b) {
         return 'ERROR: pirmas parametras turi buti skaicius';
     }
     if (a === Infinity) {
-        return 'ERROR: pirmas parametras negali buti begalybe'
+        return 'ERROR: pirmas parametras negali buti begalybe';
     }
     if (isNaN(a)) {
-        return 'ERROR: pirmas parametras negali buti NaN'
+        return 'ERROR: pirmas parametras negali buti NaN';
     }
 
     // ar "b" nera skaicius
@@ -16,15 +16,15 @@ function daugyba(a, b) {
         return 'ERROR: antras parametras turi buti skaicius';
     }
     if (b === Infinity) {
-        return 'ERROR: antras parametras negali buti begalybe'
+        return 'ERROR: antras parametras negali buti begalybe';
     }
     if (isNaN(b)) {
-        return 'ERROR: antras parametras negali buti NaN'
+        return 'ERROR: antras parametras negali buti NaN';
     }
 
     // logic
     const ats = a * b;
-    return ats;
+    return ats === 0 ? 0 : ats;
 }
 
 // skaiciai: teigiami, nulis, neigiami
@@ -60,6 +60,4 @@ console.log(daugyba(2, -2.5), '->', -5);
 console.log(daugyba(2, 0), '->', 0);
 console.log(daugyba(-2, -8), '->', 16);
 console.log(daugyba(0, 0), '->', 0);
-
-// vis dar gaunamas klaidingas atsakymas
 console.log(daugyba(0, -5), '->', 0);
