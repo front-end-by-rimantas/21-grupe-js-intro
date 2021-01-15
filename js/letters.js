@@ -16,6 +16,9 @@ function letters(text, step) {
     if (step === 0) {
         return 'ERROR: zingsnis negali buti nulinis (0).';
     }
+    if (step % 1 !== 0) {
+        return 'ERROR: zingsnis turi buti sveikasis skaicius.';
+    }
 
     const textSize = text.length;
     if (textSize < step) {
@@ -25,11 +28,20 @@ function letters(text, step) {
     // logic
     let newText = '';
 
-    for (let i = 0; i < textSize; i++) {
-        const letter = text[i];
-        // console.log(i, letter);
-        if (i % step === step - 1) {
-            newText = newText + letter;
+    // for (let i = 0; i < textSize; i++) {
+    //     const letter = text[i];
+    //     if (i % step === step - 1) {
+    //         newText += letter;
+    //     }
+    // }
+
+    if (step > 0) {
+        for (let i = step - 1; i < textSize; i += step) {
+            newText += text[i];
+        }
+    } else {
+        for (let i = textSize + step; i >= 0; i += step) {
+            newText += text[i];
         }
     }
 
@@ -54,6 +66,8 @@ console.log(letters('abc', -Infinity));
 console.log(letters('', 2));
 console.log(letters('abc', 0));
 console.log(letters('abc', 4));
+console.log(letters('abcdefghijkl', -2.3));
+console.log(letters('abcdefghijkl', 2.3));
 
 console.log(letters('abc', 1), '->', 'abc');
 console.log(letters('abcdef', 1), '->', 'abcdef');
@@ -61,3 +75,11 @@ console.log(letters('abcdefg', 2), '->', 'bdf');
 console.log(letters('qwertyuiop', 2), '->', 'wryip');
 console.log(letters('abcdefghijkl', 3), '->', 'cfil');
 console.log(letters('abcdefghijkl', 4), '->', 'dhl');
+
+console.log(letters('abc', -1), '->', 'cba');
+console.log(letters('abcdef', -1), '->', 'fedcba');
+console.log(letters('abcdefg', -2), '->', 'fdb');
+console.log(letters('qwertyuiop', -2), '->', 'outeq');
+console.log(letters('abcdefghijkl', -3), '->', 'jgda');
+console.log(letters('abcdefghijkl', -4), '->', 'iea');
+
